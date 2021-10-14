@@ -1,6 +1,23 @@
 # Automated Video editing pipeline
 Author: Leelendhu Mouli Kothapalli
 
+For running the python script, download the repository and run 
+
+$ python video_sort.py "shuffled_19.mp4"
+
+For building a docker image, download the repository and run
+
+$ docker build -t videosort .
+
+For running the docker image, after building it like above, run
+
+$ cd DockerComposeFile
+
+$ docker compose -up
+
+You can check if the docker image is running using
+
+$ docker ps
 
 ## 1 Problem Statement
 
@@ -290,17 +307,27 @@ MSE | 370 seconds |
 
 ### 4.2) Feature Matching
 
-The author has also tried using feature matching to remove outliers and sort the images. 
+Feature matching was also used to  remove outliers but it was observed that it is not a very effective method. 
+
+The main problem observed was that there could be outlier frames with similar features to original frames of
+
+the video. To ensure that does not happen, we will need to train the algortihm to only track particular set of 
+
+features or avoid certain features. But this would mean having a training set and some prior information about 
+
+the video and outliers. Clearly in Figure 1, we see that ORB features are matched between trees found in an 
+
+outlier frame and the actual video frame. 
 
 
 
 
+![Feature Matching](featurematching.png)
 
 
 
 
-## 5 Appendix
 
 ## References
-
+[1]  Wang Z.,  Bovik A. C.,  Sheikh H. R.,  and Simoncelli E. P.  Image quality assessment:  From errorvisibility to structural similarity.IEEE Transactions on Image Processing, 13(4), 600–612., 2004
 
