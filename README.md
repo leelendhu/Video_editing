@@ -5,6 +5,14 @@ For running the python script, download the repository and run
 
 $ python video_sort.py "shuffled_19.mp4"
 
+You will need openCV library and numpy library to run this code, you can install them using
+
+$ pip install opencv-python
+
+$ pip install numpy
+
+Or you can use the google colab notebook Video_sort.ipynb which has pre installed libraries
+
 For building a docker image, download the repository and run
 
 $ docker build -t videosort .
