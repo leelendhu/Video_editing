@@ -57,7 +57,7 @@ challenge was to remove the outlier frames and reorder the sequence. The shuffle
 
   Square Error (MSE) distance. Note that all these would work well only if both images have the
 
-  same scale. Structural Similarity Index, developed by Wang et al [ref here] is another method that
+  same scale. Structural Similarity Index, developed by Wang et al [1] is another method that
 
   overcomes the issues associated with MSE. There are many other such distance functions which
 
