@@ -16,10 +16,10 @@ def frames_from_video(video_path):
     from a video file is returned
 
                 Parameters:
-                    frame_array (array): image array of individual frames from the video
+                    video_path (string): location of video file
 
                 Returns:
-                    averageL1 (array): an array containing L1 norm of its 5 nearest neighbours
+                    frame_array (array): an image array containing each frame of the video
     '''
     vid=cv2.VideoCapture(video_path)
     i=0
